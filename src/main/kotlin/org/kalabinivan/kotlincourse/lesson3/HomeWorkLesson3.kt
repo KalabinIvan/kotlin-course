@@ -1,7 +1,5 @@
 package org.kalabinivan.kotlincourse.lesson3
 
-package org.kalabinivan.kotlincourse.lesson3
-
 //Название мероприятия
 const val NAME_OF_CONTEST: String = "Hackaton" // Название мы не собираемся менять
 
