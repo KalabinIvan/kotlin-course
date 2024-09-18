@@ -29,3 +29,5 @@ fun printMeteoMeasurements(atmosPress: Int?){
 
     println(atmosPress ?: throw Exception("measurements are not possible"))
 }
+
+// committest
