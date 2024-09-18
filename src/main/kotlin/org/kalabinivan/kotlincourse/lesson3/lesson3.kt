@@ -1,6 +1,5 @@
 package org.kalabinivan.kotlincourse.lesson3
 
-package org.kalabinivan.kotlincourse
 val name: String = "Alice" // String строка
 
 var age: Double = 30.0 //int integer - целочисленное

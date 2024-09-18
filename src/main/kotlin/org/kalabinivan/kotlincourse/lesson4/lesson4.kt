@@ -26,7 +26,7 @@ val keysToValuses: Map<String, String> = mapOf(
 
 val anything: Any = true // любой тип можно положить в Any
 
-val unit: Unit = "" // не указанный тип переменной
+// не указанный тип переменной
 
 fun fail(message: String): Nothing {
     throw IllegalStateException(message)
