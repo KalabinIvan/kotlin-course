@@ -3,7 +3,7 @@ package org.kalabinivan.kotlincourse.lesson5
 fun main() {
     printSoundInt(fadingKoef = 0.8)
     printSoundInt(fadingKoef = null)
-    printDeliveryPrice(70.0)
+    printDeliveryPrice(100.0)
     printDeliveryPrice(null)
     printMeteoMeasurements(700)
     printMeteoMeasurements(null)
@@ -13,11 +13,11 @@ fun main() {
 
 fun printSoundInt(soundInt: Double = 10.0, fadingKoef: Double?){
 
-    val defaultFadKoef = 0.5
+    val defaultFadKoef = 0.005
     println(soundInt * (fadingKoef ?: defaultFadKoef))
 }
 
-fun printDeliveryPrice (cargoCost: Double?, insuranceKoef: Double = 0.5) {
+fun printDeliveryPrice (cargoCost: Double?, insuranceKoef: Double = 0.005) {
     val defaultCargoCost = 50.0
 
     val insurance = ((cargoCost ?: defaultCargoCost) * insuranceKoef)
