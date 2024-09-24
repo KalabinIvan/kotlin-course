@@ -42,6 +42,18 @@ fun season(numberOfMonth: Int): String{
 
 }
 
+// === Решение от Куратора ===
+
+//fun getSeason(month: Int): String {
+//    return when (month) {
+//        !in 1..12 -> "Неверно указан месяц"
+//        in 3..5 -> "Весна"
+//        in 6..8 -> "Лето"
+//        in 9..11 -> "Осень"
+//        else -> "Зима"
+//    }
+//}
+
 // === С помощью when ===
 
 fun season2(numberOfMonth2: Int): String{
@@ -59,7 +71,7 @@ fun season2(numberOfMonth2: Int): String{
 // === С помощью if else ===
 
 fun humanAge(dogsAge: Int): Any {
-    return if (dogsAge in 1..2) {
+    return if (dogsAge < 2) { // здесь лучше сделать просто < 2 (коммент от куратора)
         dogsAge * 10.5
     } else if (dogsAge > 2) {
         (dogsAge - 2) * 4 + 21
@@ -77,10 +89,10 @@ fun transport(pathLength: Double): String {
     return if (pathLength < 0){
         "Введите корректное расстояние"
     }
-    else if (pathLength in 0.0..1.0) {
+    else if (pathLength < 1.0) { // здесь лучше сделать просто < 1 (коммент от куратора)
         "Пешком"
     }
-    else if (pathLength in 1.01..5.0) {
+    else if (pathLength < 5.0) { // здесь лучше сделать просто < 5 (коммент от куратора)
         "Велосипед"
     }
     else {
@@ -113,8 +125,8 @@ fun bonusPoints(amount: Int): Any {
         lessAmount
     } else if  (amount in 100..999) {
     amount / 100 * 2
-    } else if (amount > 999) {
-        amount / 100 * 5 + 18
+    } else if (amount > 999) { // завести переменную
+        amount / 100 * 5 + 18 // при повторяющихся действиях лучше занести их в переменную
     } else incorrectData
 }
 
@@ -140,9 +152,9 @@ fun bonusPoints2(amount2: Int): Any {
 
 fun fileType(fileExtension: String): String {
     return when(fileExtension) {
-        in ".txt",".doc" -> "Текстовый документ"
-        in ".png",".jpg" -> "Изображение"
-        in "xls","xlsx" -> "Таблица"
+        ".txt",".doc" -> "Текстовый документ"
+        ".png",".jpg" -> "Изображение"
+        "xls","xlsx" -> "Таблица"
         else -> "Неизвестный тип"
     }
 }
@@ -171,7 +183,7 @@ fun temperatureConv(temperature: Double, unitOfMeasurement: String): String {
 // === С помощью if else ===
 
 fun kindMeteorologist (degrees: Int): String {
-    return if (degrees in 0 downTo -30){
+    return if (degrees in 0 downTo -30){ // ипользовалась функция until
         "Рекомендуется надеть куртку и шапку"
     } else if (degrees in 1..15){
         "Рекомендуется надеть ветровку"
