@@ -38,7 +38,7 @@ package org.kalabinivan.kotlincourse.lesson7
 //        println(counter) // значение булевое. Сначала иполнение проверки потом кода
 //    }
 //}
-
+//
 //fun main() {
 //    do {
 //        println("+")  // сначала исполняется код потом проверка
@@ -58,7 +58,7 @@ package org.kalabinivan.kotlincourse.lesson7
 // === ПРАКТИКА ===
 
 //    Отобразить цифры от 1 до 10
-fun main () {
+//fun main () {
 //    for (i in 1..10){
 //        println(i)
 //    }
@@ -106,4 +106,4 @@ fun main () {
 //    }
 //
 //
-}
+//}
