@@ -22,7 +22,7 @@ fun main() {
     println(fileName)
     println()
     println("Задание 5")
-//    println(abbreviation("Объектно-ориентированное программирование"))
+    println(abbreviation("Пошел на хер"))
 
 
 
@@ -82,15 +82,17 @@ val fileName = filePath.substring(26)
 //Используй for для перебора слов. Используй var переменную для накопления первых букв.
 //Описание: У вас есть фраза, например "Объектно-ориентированное программирование". Создайте аббревиатуру из начальных букв слов (например, "ООП").
 
-//fun abbreviation(fewWords: String): String {
-//    val splitFewWords = fewWords.split(" ","-")
-////    var =
-//        for (words in splitFewWords){
-//
-//    }
-//
-////    return "$splitFewWords"
-//}
+fun abbreviation(fewWords: String): String {
+    val splitFewWords = fewWords.split(" ", "-")
+
+    for (words in splitFewWords) {
+        val firstLetter = words[0]
+        val result = firstLetter.uppercase()
+        print(result)
+    }
+    return ""
+}
+
 
 
 
