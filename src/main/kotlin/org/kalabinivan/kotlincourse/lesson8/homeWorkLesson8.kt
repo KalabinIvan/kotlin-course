@@ -16,13 +16,13 @@ fun main() {
     println("**** **** **** $lastFour")
     println()
     println("Задание 3")
-    println(emailformat2)
+    println(emailFormat)
     println()
     println("Задание 4")
     println(fileName)
     println()
     println("Задание 5")
-    println(abbreviation("Пошел на хер"))
+    println(abbreviation("the last of us"))
 
 
 
@@ -34,10 +34,10 @@ fun textRedactor(phrase: String): String {
     val sometimes = "Иногда,"
     val butNotAlways = ", но не всегда"
     return when {
-        phrase.contains("невозможно") -> phrase.replace("невозможно", "совершенно точно возможно, просто требует времени")
+        phrase.contains("невозможно") -> phrase.replace("невозможно", "совершенно точно возможно, просто требует времени", true)
         phrase.startsWith("Я не уверен", true) -> "$phrase$but"
-        phrase.contains("катастрофа") -> phrase.replace("катастрофа", "интересное событие")
-        phrase.endsWith("без проблем") -> phrase.replace("без проблем", "с парой интересных вызовов на пути")
+        phrase.contains("катастрофа") -> phrase.replace("катастрофа", "интересное событие", true)
+        phrase.endsWith("без проблем") -> phrase.replace("без проблем", "с парой интересных вызовов на пути", true)
         !phrase.contains(" ") ->  "$sometimes $phrase$butNotAlways"
         else -> ""
     }
@@ -67,8 +67,7 @@ val lastFour = creditCard.substring(15)
 //Описание: У вас есть электронный адрес "username@example.com". Преобразуйте его в строку "username [at] example [dot] com".
 
 val email = "username@example.com"
-val emailFormat = email.replace("@" ,"[at]")
-val emailformat2 = emailFormat.replace(".","[dot]")
+val emailFormat = email.replace("@", " [at] ").replace(".", " [dot] ")
 
 // === ЗАДАНИЕ 4 ===
 //Извлечение Имени Файла из Пути
@@ -86,9 +85,8 @@ fun abbreviation(fewWords: String): String {
     val splitFewWords = fewWords.split(" ", "-")
 
     for (words in splitFewWords) {
-        val firstLetter = words[0]
-        val result = firstLetter.uppercase()
-        print(result)
+        val firstLetter = words[0].uppercase()
+        print(firstLetter)
     }
     return ""
 }

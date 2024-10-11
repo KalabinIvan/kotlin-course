@@ -41,8 +41,8 @@ fun main() {
 //    Задание 5: Работа с Nullable Элементами
 //    Создайте массив из 3 nullable строк. Инициализируйте его одним null значением и двумя строками.
     println("Задание 5")
-    val array5 = arrayOfNulls<String?>(3)
-    println("НЕ СДЕЛАНО")
+    val array5: Array<String?> = arrayOf(null, " ", "asd")
+    println(array5)
 
 //    Задание 6: Копирование Массива
 //    Создайте массив целых чисел и скопируйте его в новый массив в цикле.
@@ -75,7 +75,7 @@ fun main() {
 //    Если значения 5 нет в массиве, возвращаем -1. Реши задачу через цикл while.
     println("Задание 8")
 
-    val array8: Array<Int> = arrayOf(5, 2, 0, 8, 0, 9)
+    val array8: Array<Int> = arrayOf(9, 2, 0, 5, 0, 9)
     val index = findIndex(array8)
     println(index)
 
@@ -285,10 +285,21 @@ fun main() {
     val set9A: Set<Int> = setOf(1, 2, 3, 4, 5)
     val set9B: Set<Int> = setOf(1, 6, 3, 7, 5)
     val set9: MutableSet<Int> = mutableSetOf()
-    var check = 0
-    for(i in set9A){
-
+    for(i in set9A) {
+        for (it in set9B) {
+            if (i == it) set9.add(i)
+        }
     }
+    println(set9)
+
+//    Задание 10: Нахождение Разности Множеств
+//    Создайте два множества строк и найдите разность первого множества относительно второго
+//    (элементы, присутствующие в первом множестве, но отсутствующие во втором).
+//    Реши задачу через вложенные циклы и переменные флаги.
+    println("Задание 10")
+
+    val set10: Set<String> = setOf("Пук", "Мук", "Лук")
+
 
 
 }
