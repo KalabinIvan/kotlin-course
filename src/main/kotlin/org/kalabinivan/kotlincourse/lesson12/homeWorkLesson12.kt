@@ -45,7 +45,8 @@ fun nullStringNullInt(nullString: String?): Int? {
 
 //Напишите сигнатуру функции, которая не принимает аргументов и возвращает nullable вещественное число.
 fun noArgReturnRealNum(): Float? {
-    return null
+    val a = null
+    return a
 }
 
 //Напишите сигнатуру функции, которая принимает nullable список целых чисел и не возвращает значения.
@@ -55,7 +56,8 @@ fun nullListReturnNothing(nullList: List<Int?>) {
 
 //Напишите сигнатуру функции, которая принимает целое число и возвращает nullable строку.
 fun arfIntReturnNullString(argInt: Int): String? {
-    return null
+    val c = null
+    return c
 }
 
 //Напишите сигнатуру функции, которая не принимает аргументов и возвращает список nullable строк.
@@ -66,7 +68,8 @@ fun noArgReturnNullString(): List<String?> {
 //Напишите сигнатуру функции, которая принимает nullable строку и nullable целое число и
 // возвращает nullable булево значение.
 fun argNullStringNullIntReturnNulBoolean(argString1: String?, argInt1: Int?): Boolean? {
-    return null
+    val f = null
+    return f
 }
 
 //Задача 1:
@@ -93,9 +96,9 @@ fun printNumbersUntil(n: Int): Unit {
 //Создайте функцию findFirstNegative, которая принимает список целых чисел и возвращает первое отрицательное число
 // в списке. Если отрицательных чисел нет, функция должна вернуть null.
 fun findFirstNegative(intList: List<Int>): Int? {
-    for (i in intList.indices) {
-         if (intList[i] < 0)
-              return intList[i]
+    for (i in intList) {
+         if (i < 0)
+              return i
     }
     return null
 }
@@ -104,11 +107,11 @@ fun findFirstNegative(intList: List<Int>): Int? {
 //Напишите функцию processList, которая принимает список строк.
 // Функция должна проходить по списку и выводить каждую строку.
 // Если встречается null значение, функция должна прекратить выполнение с помощью return без возврата значения.
-fun processList(stringList: List<String?>): Unit {
+fun processList(stringList: List<String?>) {
     println("Задание 5")
-    for (i in stringList.indices) {
-         if (stringList[i] != null){
-             println(stringList[i])
+    for (i in stringList) {
+         if (i != null){
+             println(i)
          }
         else return
     }
