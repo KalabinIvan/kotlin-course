@@ -1,24 +1,17 @@
 package org.kalabinivan.kotlincourse.lesson15.homework
 
 object Moon {
-    var isVisible = true
-//    private var phase: List<String> = listOf("New Moon",
-//        "Waxing Crescent",
-//        "First Quarter",
-//        "Waxing Gibbous",
-//        "Full Moon",
-//        "Waning Gibbous",
-//        "Third Quarter",
-//        "Waning Crescent"
-//        )
-    var phase: String = ""
+    private var isVisible = true
 
-    fun showPhase() {
+    fun showPhase(phase: String) {
         if (!isVisible)
         println("Луна не видна")
         else
         println("Текущая фаза Луны: $phase")
+    }
 
+    fun setVisible(isVisible: Boolean) {
+        this.isVisible = isVisible
     }
 }
 
