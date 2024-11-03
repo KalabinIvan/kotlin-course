@@ -1,6 +1,6 @@
 package org.kalabinivan.kotlincourse.lesson18.homework
 
-fun main(){
+fun main() {
     val animals = listOf(Dog(), Cat(), Bird())
     for (i in animals.indices) {
         animals[i].makeSound()
@@ -24,8 +24,7 @@ fun main(){
     cart.addToCart(mapOf(1 to 2, 3 to 4))
     cart.addToCart(listOf(1, 2, 4))
     println(cart.toString())
-
+}
     fun printColored(text: String, color: String, background: String){
         println("$color$background$text${Color.RESET}")
     }
-}
