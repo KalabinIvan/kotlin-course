@@ -25,4 +25,7 @@ fun main(){
     cart.addToCart(listOf(1, 2, 4))
     println(cart.toString())
 
+    fun printColored(text: String, color: String, background: String){
+        println("$color$background$text${Color.RESET}")
+    }
 }
