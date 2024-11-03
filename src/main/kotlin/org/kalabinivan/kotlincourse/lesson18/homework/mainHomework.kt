@@ -21,21 +21,8 @@ fun main(){
     val cart = Cart()
     cart.addToCart(1)
     cart.addToCart(2, 3)
-    cart.addToCart(mapOf(2 to 3, 4 to 4))
-    cart.addToCart(listOf(1, 2, 5))
+    cart.addToCart(mapOf(1 to 2, 3 to 4))
+    cart.addToCart(listOf(1, 2, 4))
     println(cart.toString())
 
-    val logForLogger = Logger()
-    logForLogger.log("Информация")
-    logForLogger.log("WARNING", "Опасность")
-    logForLogger.log("ERROR", "Ошибка")
-    logForLogger.log("DEBUG", "Отладка")
-    val logList = listOf("Сообщение 1","Сообщение 2", "Сообщение 3")
-    logForLogger.log(logList)
-    val exception = Exception("Все пропало")
-    logForLogger.log(exception)
-}
-
-fun printColored(text: String, color: String, background: String){
-    println("$color$background$text${Color.RESET}")
 }
