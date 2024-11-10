@@ -29,7 +29,7 @@ class Cart {
 
     override fun toString(): String {
         var cart = "Корзина:\n"
-        var itemsAll = 0
+        var itemsAll = items.keys.size
         var quantityAll = 0
 
         for ((itemId, quantity) in items) {
